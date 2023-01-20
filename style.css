@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    background-color: #e1e1e187;
+  
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+button.login {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    color: #6B728E;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    background-color: white;
+    font-size: 16px;
+    
+}
+button.login:hover {
+    background-color:#e1e1e187;
+    color: white;
+}
+.title {
+    font-size: 30px;
+}
+nav {
+    background-color: #6B728E;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+button.add-book-button{
+    padding: 15px;
+    border: none;
+    background-color: #6b728e;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+}
+button.add-book-button:hover {
+    background-color: #969fc1d4;
+}
+.add-book {
+    text-align: center;
+    margin-top: 25px;
+}
+.openBtn {
+    display: flex;
+    justify-content: left;
+  }
+  .openButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #1c87c9;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  .openBtn {
+    display: flex;
+    justify-content: left;
+  }
+  .openButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #1c87c9;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  .formPopup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    z-index: 9;
+    top: 172px;
+  }
+  .formContainer {
+    max-width: 300px;
+    padding: 30px;
+    background-color: #6b728e;
+  }
+  .formContainer input[type=text],
+  .formContainer input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+    color: #6b728e;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .formContainer input[type=text]:focus, .formContainer input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+   .add {
+    padding: 12px 20px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    font-size: 17px;
+    transition: 0.1s
+  }
+  .add:hover {
+    background-color: #275e27;
+  }
+
+  .formContainer .btn:hover,
+  .openButton:hover {
+    opacity: 1;
+  }
+  label {
+    color: black;
+  }
+  .add-book-title {
+    color: white;
+    padding-bottom: 20px;
+  }
+  .close-form-button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    background-color: red;
+    transition: 0.1s;
+  }
+  .close-form-button:hover {
+    background-color: #a91212;
+  }
+  .did-you-read {
+    font-size: 17px;
+
+  }
+  .book-read {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .readed, .close-form-button {
+    font-size: 17px;
+  }
+
+
+/*Checkbox style start */
+.toggler-wrapper {
+    display: block;
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .toggler-wrapper input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+    background-color: #44cc66;
+  }
+  
+  .toggler-wrapper .toggler-slider {
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  
+  .toggler-wrapper .toggler-knob {
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+    left: calc(100% - 19px - 3px);
+  }
+  
+  .toggler-wrapper.style-1 .toggler-knob {
+    width: calc(25px - 6px);
+    height: calc(25px - 6px);
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+  }
+
+/*Checkbox style end*/
+
+@keyframes appear {
+    0% {
+      position: absolute;
+      z-index: 100;
+      display: flex;
+      transform: scale(0.1);
+      transition: all 500ms ease-out,
+    
+    }
+    100% {
+      position: fixed;
+      z-index: 100;
+      display: flex;
+      }
+  }
+
+  .book-card {
+    background-color:#6B728E;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+.books-display {
+  display: grid;
+  margin-top: 30px;
+  gap: 35px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+}
+.author-display {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+p.title-display {
+  font-size: 25px;
+}
+.read-display {
+  background-color: green;
+  padding: 5px 25px 5px 25px;
+  font-size: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.1s;
+  border: none;
+}
+.read-display:hover {
+  background-color: #275e27;
+}
+.not-read-display {
+  background-color: red;
+  padding: 5px 25px 5px 25px;
+  font-size: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.1s;
+  border: none;
+}
+.not-read-display:hover {
+  background-color: #a91212;
+}
+.remove {
+  margin-top: 40px;
+}
+.bi.bi-trash {
+  font-size: 30px;
+  color: red;
+  padding: 5px;
+  border-radius: 16px;
+  background-color:white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.bi.bi-trash:hover {
+  color: #ff00009e;
+}

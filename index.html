@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Library App</title>
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="nav-bar">
+            <h2 class="title">Library App</h2>
+            <button class="login">Log in</button>
+        </nav>
+        <div class="add-book">
+            <button class="add-book-button" onclick="openForm()">+Add Book</button>
+        </div>
+        <div class="main">
+            <div class="books-display">       
+            </div>
+            <div class="pop-up-screen-change"></div>
+            <div class="loginPopup">
+                <div class="formPopup" id="popupForm">
+                  <form class="formContainer">
+                    <h2 class="add-book-title">Add new book</h2>
+                    <div class="book-author">
+                        <label for="author"></label>
+                        <input type="text" id="book-author" placeholder="Book Author..." name="book-author" required>
+                    </div>
+                    <div class="book-title">
+                    <label for="title"></label>
+                    <input type="text" id="book-title" placeholder="Book Title..." name="book-title" required>
+                    </div>
+                    <div class="book-pages">
+                        <label for="pages"></label>
+                        <input type="number" id="book-pages" placeholder="Book Pages..." name="book-pages" required>
+                    </div>
+                    <div class="book-read">
+                        <span class="did-you-read">Did you read the book?</span>
+                        <label class="toggler-wrapper style-1">
+                            <input id="checkbox" type="checkbox" name="book-read">
+                            <div class="toggler-slider">
+                              <div class="toggler-knob">
+                              </div>
+                            </div>
+                          </label>
+                    </div>
+                    <button onclick="addBookToLibrary()" type="submit" class="add">Add</button>
+                    <button type="button" class="close-form-button" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
