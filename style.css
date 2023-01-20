@@ -304,3 +304,8 @@ p.title-display {
 .bi.bi-trash:hover {
   color: #ff00009e;
 }
+@media only screen and (max-width: 600px) {
+  .formPopup {
+    top: 85px;
+  }
+}
