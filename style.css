@@ -99,6 +99,7 @@ button.add-book-button:hover {
     max-width: 300px;
     padding: 30px;
     background-color: #6b728e;
+    min-width: max-content;
   }
   .formContainer input[type=text],
   .formContainer input[type=number] {
